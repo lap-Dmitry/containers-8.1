@@ -19,7 +19,7 @@
         ],
         "linebreak-style": [
             "error",
-            "windows"
+            "unix"
         ],
         "no-unused-vars": "warn",
         "no-multiple-empty-lines": "warn"
