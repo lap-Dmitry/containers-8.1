@@ -42,14 +42,35 @@ test('create Character levelUp 0', () => {
   expect(() => character.levelUp()).toThrowError(new Error('Невозможно повысить уровень'));
 });
 
-test('create Character levelUp ok', () => {
+test('create Character levelUp health', () => {
   const character = new Character('Oleg', 'Magician');
   character.attack = 10;
   character.defence = 10;
   character.levelUp();
   expect(character.health).toBe(100);
+});
+
+test('create Character levelUp attack', () => {
+  const character = new Character('Oleg', 'Magician');
+  character.attack = 10;
+  character.defence = 10;
+  character.levelUp();
   expect(character.attack).toBe(12);
+});
+
+test('create Character levelUp defence', () => {
+  const character = new Character('Oleg', 'Magician');
+  character.attack = 10;
+  character.defence = 10;
+  character.levelUp();
   expect(character.defence).toBe(12);
+});
+
+test('create Character levelUp ok', () => {
+  const character = new Character('Oleg', 'Magician');
+  character.attack = 10;
+  character.defence = 10;
+  character.levelUp();
   expect(character.level).toBe(2);
 });
 
